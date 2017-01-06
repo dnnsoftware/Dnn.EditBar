@@ -148,10 +148,10 @@ namespace Dnn.EditBar.UI.Controllers
                     continue;
                 }
 
-                var ajaxPanel = new DnnAjaxPanel
+                var ajaxPanel = new UpdatePanel
                 {
                     ID = pane.ID + "_SyncPanel",
-                    RestoreOriginalRenderDelegate = false,
+                    UpdateMode = UpdatePanelUpdateMode.Conditional
 
                 };
 
@@ -174,7 +174,7 @@ namespace Dnn.EditBar.UI.Controllers
                     return;
                 }
 
-                ajaxPanel.CssClass = pane.Attributes["class"];
+                //ajaxPanel.CssClass = pane.Attributes["class"];
                 pane.Attributes["class"] = string.Empty;
 
                 var scriptManager = ScriptManager.GetCurrent(Page);

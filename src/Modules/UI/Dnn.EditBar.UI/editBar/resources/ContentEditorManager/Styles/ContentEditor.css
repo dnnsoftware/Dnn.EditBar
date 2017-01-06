@@ -866,7 +866,7 @@ div.module-motion {
     position: absolute;
     z-index: 1110;
 }
-.EditBarEmptyPane { display: block !important;width: auto !important;}
+.EditBarEmptyPane { display: block !important;}
 .module-drag-tip {
     position: fixed;
     background-color: #000;

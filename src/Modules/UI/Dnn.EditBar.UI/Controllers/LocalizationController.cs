@@ -108,7 +108,7 @@ namespace Dnn.EditBar.UI.Controllers
         {
             using (var stream = new FileStream(System.Web.HttpContext.Current.Server.MapPath(fullPath), FileMode.Open, FileAccess.Read))
             {
-                var document = new XmlDocument();
+                var document = new XmlDocument { XmlResolver = null };
                 document.Load(stream);
 
                 // ReSharper disable AssignNullToNotNullAttribute
